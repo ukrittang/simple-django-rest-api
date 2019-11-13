@@ -19,3 +19,6 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     objects = ArticleManager()
+
+    class Meta:
+        ordering = ('-created',)

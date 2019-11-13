@@ -14,7 +14,6 @@ from .serializers import (ArticlesSerializer, ArticleCreateSerializer, ArticleSe
 
 class ArticlesAPIView(ListCreateAPIView):
     serializer_class = ArticleCreateSerializer
-    pagination_class = ArticlesPagination
     queryset = Article.objects.is_publish()
 
     def get(self, request, *args, **kwargs):
