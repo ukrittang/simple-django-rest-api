@@ -13,15 +13,16 @@ To start server:
 
 ## API Routes
 
-    /api/auth/login/
-    /api/auth/logout/
-    /api/auth/password/reset/confirm/
-    /api/auth/user/
-    /api/auth/password/change/
-    /api/articles/create/
-    /api/articles/update/
-    /api/articles/delete/
-    /api/articles/
+| Endpoint             | Method | Usage             |
+| -------------------- | ------ | ----------------- |
+| `/api/auth/login/`   | POST   | Login             |
+| `/api/auth/logout/`  | POST   | Logout            |
+| `/api/auth/user/`    | GET    | Get user details  |
+| `/api/articles`      | GET    | Get articles      |
+| `/api/articles`      | POST   | Create an article |
+| `/api/articles/:id/` | GET    | Get an article    |
+| `/api/articles/:id/` | PUT    | Update an article |
+| `/api/articles/:id/` | DELETE | Delete an article |
 
 ### Admin
 
