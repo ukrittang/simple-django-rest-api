@@ -1,6 +1,5 @@
-from django.forms.models import model_to_dict
 from rest_framework.serializers import (
-    ModelSerializer, SerializerMethodField
+    ModelSerializer
 )
 
 from articles.models import Article

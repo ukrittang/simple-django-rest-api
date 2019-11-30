@@ -1,24 +1,28 @@
-from django.http import Http404
 from rest_framework.generics import (
-    ListCreateAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
+    ListCreateAPIView, RetrieveUpdateDestroyAPIView
 )
-from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 
 from articles.models import Article
 
 from .pagination import ArticlesPagination
 from .permissions import IsAuthorOrReadOnly
-from .serializers import (ArticlesSerializer, ArticleCreateSerializer, ArticleSerializer, ArticleUpdateSerializer)
+from .serializers import (
+    ArticlesSerializer,
+    ArticleCreateSerializer,
+    ArticleSerializer,
+    ArticleUpdateSerializer
+)
 
 
 class ArticlesAPIView(ListCreateAPIView):
-    serializer_class = ArticleCreateSerializer
+    serializer_class = ArticlesSerializer
+    pagination_class = ArticlesPagination
     queryset = Article.objects.is_publish()
 
-    def get(self, request, *args, **kwargs):
-        self.serializer_class = ArticleSerializer
-        return self.list(request, *args, **kwargs)
+    def post(self, request, *args, **kwargs):
+        self.serializer_class = ArticleCreateSerializer
+        return self.create(request, *args, **kwargs)
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
