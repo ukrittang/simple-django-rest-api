@@ -2,9 +2,8 @@
 
 Clone the project and run these commands:
 
-    virtualenv -p python3 venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+    pipenv shell
+    pipenv install
     python manage.py migrate
 
 To start server:
