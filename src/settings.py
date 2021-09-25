@@ -161,6 +161,7 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
+    'http://localhost:8080',
 )
 
 CORS_ALLOW_CREDENTIALS = True
@@ -177,11 +178,4 @@ JWT_AUTH = {
 # Just to prevent error on sign up because of no email setup
 ACCOUNT_EMAIL_VERIFICATION = None
 ACCOUNT_EMAIL_REQUIRED = True
-
-
-CORS_ORIGIN_WHITELIST = [
-    "https://example.com",
-    "https://sub.example.com",
-    "http://localhost:3000",
-    "http://127.0.0.1:9000"
-]
+ACCOUNT_AUTHENTICATION_METHOD = 'email'

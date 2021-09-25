@@ -1,8 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
-
-from allauth.socialaccount.providers.facebook.views import FacebookOAuth2Adapter
+from allauth.socialaccount.providers.facebook.views import \
+    FacebookOAuth2Adapter
 from allauth.socialaccount.providers.google.views import GoogleOAuth2Adapter
+from django.contrib import admin
+from django.urls import include, path
 from rest_auth.registration.views import SocialLoginView
 
 
