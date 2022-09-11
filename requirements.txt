@@ -1,5 +1,6 @@
 asgiref==3.4.1
 astroid==2.12.9
+autopep8==1.7.0
 certifi==2020.6.20
 cffi==1.14.3
 chardet==4.0.0
@@ -7,13 +8,13 @@ charset-normalizer==2.0.6
 cryptography==35.0.0
 defusedxml==0.6.0
 dill==0.3.5.1
+dj-rest-auth==2.2.5
 Django==3.2.15
 django-allauth==0.51.0
 django-cors-headers==3.10.0
 django-filter==21.1
-django-rest-auth==0.9.5
 djangorestframework==3.12.4
-djangorestframework-jwt==1.11.0
+djangorestframework-simplejwt==5.2.0
 future==0.18.2
 idna==2.10
 isort==5.10.1
@@ -22,9 +23,9 @@ Markdown==3.3.4
 mccabe==0.6.1
 oauthlib==3.1.0
 platformdirs==2.4.0
+pycodestyle==2.9.1
 pycparser==2.20
-PyJWT==1.7.1
-pylint==2.15.2
+PyJWT==2.4.0
 python-http-client==3.3.1
 python3-openid==3.2.0
 pytz==2020.1
