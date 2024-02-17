@@ -1,6 +1,4 @@
-from rest_framework.generics import (
-    ListCreateAPIView, RetrieveUpdateDestroyAPIView
-)
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import AllowAny
 
 from articles.models import Article
@@ -8,10 +6,10 @@ from articles.models import Article
 from .pagination import ArticlesPagination
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (
-    ArticlesSerializer,
     ArticleCreateSerializer,
     ArticleSerializer,
-    ArticleUpdateSerializer
+    ArticlesSerializer,
+    ArticleUpdateSerializer,
 )
 
 

@@ -1,5 +1,12 @@
 {
-  "python.pythonPath": "venv/bin/python",
-  "python.formatting.provider": "autopep8",
-  "python.linting.enabled": true
+  "pylint.args": [
+    "--load-plugins=pylint_django",
+    "--help-msg=django-not-configured",
+    "--disable=missing-module-docstring",
+  ],
+  "prettier.enable": false,
+  "python.analysis.typeCheckingMode": "off",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }
