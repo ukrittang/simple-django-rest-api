@@ -5,7 +5,7 @@ certifi==2023.7.22
 cffi==1.14.3
 chardet==4.0.0
 charset-normalizer==2.0.6
-cryptography==42.0.0
+cryptography==42.0.2
 defusedxml==0.6.0
 dill==0.3.5.1
 dj-rest-auth==2.2.5
